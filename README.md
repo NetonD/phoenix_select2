@@ -3,6 +3,8 @@
 This is just a `live componet` that improves the multi select user experience. 
 ## Installation
 
+**You need alpine installed in your project**
+
 **Is supposed that you already has LiveView and is using Phoenix**
 ```elixir
 def deps do
