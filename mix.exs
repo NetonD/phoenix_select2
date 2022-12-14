@@ -7,7 +7,8 @@ defmodule PhoenixSelect2.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package()
     ]
   end
 
@@ -22,6 +23,17 @@ defmodule PhoenixSelect2.MixProject do
   defp deps do
     [
       {:phoenix_live_view, "~> 0.15.0"}
+    ]
+  end
+
+  defp package do
+    [
+      description: "Improved multiselect live view experience",
+      licenses: ["MIT"],
+      maintainers: ["Almir Neto"],
+      links: %{
+        "GitHub" => "https://github.com/netond/phoenix_select2"
+      }
     ]
   end
 end
