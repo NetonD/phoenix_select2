@@ -12,6 +12,98 @@ def deps do
 end
 ```
 
+Add this class on your `app.css`:
+```css
+.phx-select2-multi-search-select-container {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+}
+
+.phx-select2-multi-search-select-search-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  padding: 0.3em 0.3em 0;
+  border: 1px solid #cccccc;
+  border-radius: 0.25em;
+}
+
+.phx-select2-multi-search-select-loading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3em;
+}
+
+.phx-select2-multi-search-select-loading > span {
+  margin-left: 0.5em;
+}
+
+.phx-select2-multi-search-select-container input {
+  flex: 1;
+  height: 1.5em;
+  margin-bottom: 0.3em;
+  border: none;
+  background: #ffffff;
+}
+
+.phx-select2-multi-search-select-container input:focus {
+  outline: none;
+}
+
+.phx-select2-multi-search-select-selected-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em 0.6em;
+  background: #90c8ea;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
+  border-radius: 0.25em;
+  appearance: none;
+  border: 0;
+  outline-color: #50a8de;
+  font-size: 14px;
+  color: #ffffff;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.phx-select2-multi-search-select-selected-option:hover {
+  background: #a6d3ee;
+}
+
+.phx-select2-multi-search-select-options-container {
+  position: absolute;
+  width: 100%;
+  max-height: 15em;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  border-radius: 0.25em;
+  list-style: none;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.phx-select2-multi-search-select-options-container li {
+  padding: 0.5em;
+}
+
+.phx-select2-multi-search-select-options-container li.active {
+  background: #90c8ea;
+  color: #ffffff;
+}
+
+.phx-select2-multi-search-select-options-container li:not(.no-hover):hover {
+  background: #90c8ea;
+  color: #ffffff;
+  cursor: pointer;
+}
+```
+
 ## Using
 
 There some parameters that can given for `live_component/1` as assign function that will

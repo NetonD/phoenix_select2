@@ -10,13 +10,13 @@ defmodule PhoenixSelect2 do
 
   def render(assigns) do
     ~L"""
-    <div class="react-multi-search-select-container" x-data="{search_select: false}">
-      <div class="react-multi-search-select-search-wrapper">
+    <div class="phx-select2-multi-search-select-container" x-data="{search_select: false}">
+      <div class="phx-select2-multi-search-select-search-wrapper">
         <%= for selected_option <- @selected_options do %>
-          <button 
-            class="react-multi-search-select-selected-option"
+          <button
+            class="phx-select2-multi-search-select-selected-option"
             phx-click="unselect-option"
-            phx-value-option-id="<%= Map.get(selected_option, :id) %>" 
+            phx-value-option-id="<%= Map.get(selected_option, :id) %>"
             phx-target="<%= @myself %>"
           >
             <%= Map.get(selected_option, @content_key) %>
@@ -26,7 +26,7 @@ defmodule PhoenixSelect2 do
         <%= for option <- @selected_options do %>
           <input type="hidden" name="<%= @form.name %>[<%= @field %>][]" value="<%= option.id %>">
         <% end %>
-        
+
         <input
           x-on:blur="setTimeout(()=>search_select=false, 200)"
           x-on:focus="search_select=true"
@@ -40,12 +40,12 @@ defmodule PhoenixSelect2 do
         />
       </div>
 
-      <ul x-show="search_select" x-transition class="react-multi-search-select-options-container">
+      <ul x-show="search_select" x-transition class="phx-select2-multi-search-select-options-container">
         <%= for option <- @options do %>
           <%= if option not in @selected_options do %>
-            <li 
+            <li
               phx-click="select-item"
-              phx-value-option-id="<%= Map.get(option, :id) %>" 
+              phx-value-option-id="<%= Map.get(option, :id) %>"
               phx-target="<%= @myself %>"
             >
               <%= Map.get(option, @content_key) %>
