@@ -4,7 +4,7 @@ defmodule PhoenixSelect2 do
   @missing_function_error_message """
   You need give the function to performs the search on live component.
 
-  <%= live_component SelectWeb.MultiSelectSearchComponent, ..., search_function: your_nice_function %>
+  <%= live_component PhoenixSelect2, ..., search_function: your_nice_function %>
   """
   use Phoenix.LiveComponent
 
