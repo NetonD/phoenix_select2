@@ -14,6 +14,7 @@ defmodule PhoenixSelect2 do
       <div class="phx-select2-multi-search-select-search-wrapper">
         <%= for selected_option <- @selected_options do %>
           <button
+            type="button"
             class="phx-select2-multi-search-select-selected-option"
             phx-click="unselect-option"
             phx-value-option-id="<%= Map.get(selected_option, :id) %>"
